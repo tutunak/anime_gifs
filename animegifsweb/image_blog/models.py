@@ -21,3 +21,6 @@ class RssUrl(models.Model):
     rssurl = models.URLField('Rss source')
     rss_name = models.CharField("Name", max_length = 200)
     active = models.BooleanField(default = 0)
+
+    def __str__(self):
+        return str(self.id) + " " + self.rss_name
