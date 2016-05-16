@@ -16,3 +16,8 @@ class Gif(models.Model):
 
     def __str__(self):
         return self.gif_name
+
+class RssUrl(models.Model):
+    rssurl = models.URLField('Rss source')
+    rss_name = models.CharField("Name")
+    active = models.BooleanField(default = 0)
